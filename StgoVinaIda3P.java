@@ -1,5 +1,4 @@
 package ida;
-
 import org.testng.annotations.*;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -123,7 +122,7 @@ public class StgoVinaIda3P {
 		driver.findElement(By.name("pan")).sendKeys("4051 8856 0044 6623");
 		try {
 			assertEquals(driver.findElement(By.xpath("//app-resume/div/div/div/h1")).getText(),
-					"Est·s pagando en WP NORMAL CREDITO");
+					"Est√°s pagando en WP NORMAL CREDITO");
 		} catch (Error e) {
 			verificationErrors.append(e.toString());
 		}
@@ -144,12 +143,12 @@ public class StgoVinaIda3P {
 		driver.findElement(By.xpath("//td/input")).click();
 		// ERROR: Caught exception [ERROR: Unsupported command [selectWindow | null | ]]
 		try {
-			assertEquals(driver.findElement(By.xpath("//h1")).getText(), "Su transacciÛn fue realizada con Èxito.");
+			assertEquals(driver.findElement(By.xpath("//h1")).getText(), "Su transacci√≥n fue realizada con √©xito.");
 		} catch (Error e) {
 			verificationErrors.append(e.toString());
 		}
 		try {
-			assertEquals(driver.findElement(By.xpath("//h2")).getText(), "Tu compra ha sido realizada con Èxito");
+			assertEquals(driver.findElement(By.xpath("//h2")).getText(), "Tu compra ha sido realizada con √©xito");
 		} catch (Error e) {
 			verificationErrors.append(e.toString());
 		}
