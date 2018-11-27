@@ -16,19 +16,19 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>3.1.0</version>
-             <scope>test</scope>
+            <scope>test</scope>
         </dependency>				
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-server</artifactId>
             <version>3.1.0</version>
-             <scope>test</scope>
+            <scope>test</scope>
         </dependency>        
         <dependency>
-            <groupId>com.github.klieber</groupId>
-            <artifactId>phantomjs</artifactId>
-            <version>1.9.8</version>
-             <scope>test</scope>
+            <groupId>com.github.detro</groupId>
+            <artifactId>phantomjsdriver</artifactId>
+            <version>1.4.0</version>
+            <scope>test</scope>
         </dependency>		
     </dependencies>
     <properties>
