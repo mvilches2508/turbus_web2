@@ -4,17 +4,12 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.regex.Pattern;
-import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriverService;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 
 public class W2E1_Caso013 {
 
@@ -25,21 +20,21 @@ public class W2E1_Caso013 {
 
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
-        /*DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
-                "src/test/java/driver/phantomjs.exe");
-        driver = new PhantomJSDriver(capabilities);*/
-        System.setProperty("webdriver.chrome.driver", "src/test/java/driver/chromedriver.exe");
-        driver = new ChromeDriver();
-        baseUrl = "http://172.20.4.233:8080/turbuscl/";
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        System.setProperty("webdriver.gecko.driver", "src/test/java/driver/geckodriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "src/test/java/driver/chromedriver.exe");
+        driver = new FirefoxDriver();
+        baseUrl = "http://172.20.4.233:8080/turbuscl/inicio-compra";
+        driver.manage().window().maximize();
     }
 
     @Test
     public void testW2E1_Caso013() throws Exception {
+        java.util.logging.Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(java.util.logging.Level.OFF);
+        java.util.logging.Logger.getLogger("org.apache.http").setLevel(java.util.logging.Level.OFF);
         driver.get(baseUrl);
+        Thread.sleep(3000);
         getFoto(driver);
-        Thread.sleep(8000);
+        Thread.sleep(2000);
         driver.findElement(By.id("destino")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ingrese ciudad de destino'])[2]/following::input[1]")).clear();
@@ -47,8 +42,7 @@ public class W2E1_Caso013 {
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ciudad de destino'])[1]/following::p[1]")).click();
-        getFoto(driver);
-        Thread.sleep(8000);
+        Thread.sleep(2000);
         try {
             assertEquals(driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ciudad de destino'])[1]/following::p[1]")).getText(), "Ciudades sugeridas");
             System.out.println("No muestra opciones de ciudades, solo muestra el siguiente texto: " + driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ciudad de destino'])[1]/following::p[1]")).getText());
