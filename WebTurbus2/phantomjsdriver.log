@@ -1,0 +1,56 @@
+[INFO  - 2018-12-03T13:27:11.027Z] GhostDriver - Main - running on port 41426
+[INFO  - 2018-12-03T13:27:11.497Z] Session [23f0ff10-f6ff-11e8-aced-67c4b8474056] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-12-03T13:27:11.504Z] Session [23f0ff10-f6ff-11e8-aced-67c4b8474056] - page.customHeaders:  - {}
+[INFO  - 2018-12-03T13:27:11.504Z] Session [23f0ff10-f6ff-11e8-aced-67c4b8474056] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-12-03T13:27:11.504Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 23f0ff10-f6ff-11e8-aced-67c4b8474056
+[ERROR - 2018-12-03T13:27:12.292Z] Session [23f0ff10-f6ff-11e8-aced-67c4b8474056] - page.onError - msg: ERROR TypeError: undefined is not a constructor (evaluating 'Array(this.divCount).fill(0)')
+[ERROR - 2018-12-03T13:27:12.293Z] Session [23f0ff10-f6ff-11e8-aced-67c4b8474056] - page.onError - stack:
+  Jt (http://172.20.4.233:8080/turbuscl/main.js:1)
+[ERROR - 2018-12-03T13:27:12.302Z] Session [23f0ff10-f6ff-11e8-aced-67c4b8474056] - page.onError - msg: ERROR TypeError: undefined is not a constructor (evaluating 'n.startsWith(t)')
+[ERROR - 2018-12-03T13:27:12.303Z] Session [23f0ff10-f6ff-11e8-aced-67c4b8474056] - page.onError - stack:
+  Jt (http://172.20.4.233:8080/turbuscl/main.js:1)
+[ERROR - 2018-12-03T13:27:12.307Z] Session [23f0ff10-f6ff-11e8-aced-67c4b8474056] - page.onError - msg: ERROR TypeError: undefined is not a constructor (evaluating 'Array(this.divCount).fill(0)')
+[ERROR - 2018-12-03T13:27:12.307Z] Session [23f0ff10-f6ff-11e8-aced-67c4b8474056] - page.onError - stack:
+  Jt (http://172.20.4.233:8080/turbuscl/main.js:1)
+[ERROR - 2018-12-03T13:27:12.310Z] Session [23f0ff10-f6ff-11e8-aced-67c4b8474056] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'n.startsWith(t)')
+[ERROR - 2018-12-03T13:27:12.311Z] Session [23f0ff10-f6ff-11e8-aced-67c4b8474056] - page.onError - stack:
+  (anonymous function) (http://172.20.4.233:8080/turbuscl/main.js:1)
+[ERROR - 2018-12-03T13:27:12.364Z] Session [23f0ff10-f6ff-11e8-aced-67c4b8474056] - page.onError - msg: ERROR TypeError: undefined is not a constructor (evaluating 'Array.from(this.normalizedNames.keys())')
+[ERROR - 2018-12-03T13:27:12.365Z] Session [23f0ff10-f6ff-11e8-aced-67c4b8474056] - page.onError - stack:
+  Jt (http://172.20.4.233:8080/turbuscl/main.js:1)
+[ERROR - 2018-12-03T13:27:12.367Z] Session [23f0ff10-f6ff-11e8-aced-67c4b8474056] - page.onError - msg: ERROR TypeError: undefined is not a constructor (evaluating 'Array.from(this.normalizedNames.keys())')
+[ERROR - 2018-12-03T13:27:12.368Z] Session [23f0ff10-f6ff-11e8-aced-67c4b8474056] - page.onError - stack:
+  Jt (http://172.20.4.233:8080/turbuscl/main.js:1)
+[ERROR - 2018-12-03T13:27:12.433Z] Session [23f0ff10-f6ff-11e8-aced-67c4b8474056] - page.onError - msg: ERROR TypeError: undefined is not a constructor (evaluating 'n.startsWith(t)')
+[ERROR - 2018-12-03T13:27:12.433Z] Session [23f0ff10-f6ff-11e8-aced-67c4b8474056] - page.onError - stack:
+  Jt (http://172.20.4.233:8080/turbuscl/main.js:1)
+[ERROR - 2018-12-03T13:27:42.488Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1543843662475
+[INFO  - 2018-12-03T13:27:42.637Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2018-12-03T13:37:31.407Z] GhostDriver - Main - running on port 23352
+[INFO  - 2018-12-03T13:37:32.210Z] Session [95e8e910-f700-11e8-b4d9-6f05463d5eb4] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-12-03T13:37:32.211Z] Session [95e8e910-f700-11e8-b4d9-6f05463d5eb4] - page.customHeaders:  - {}
+[INFO  - 2018-12-03T13:37:32.211Z] Session [95e8e910-f700-11e8-b4d9-6f05463d5eb4] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-12-03T13:37:32.212Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 95e8e910-f700-11e8-b4d9-6f05463d5eb4
+[ERROR - 2018-12-03T13:37:33.453Z] Session [95e8e910-f700-11e8-b4d9-6f05463d5eb4] - page.onError - msg: ERROR TypeError: undefined is not a constructor (evaluating 'Array(this.divCount).fill(0)')
+[ERROR - 2018-12-03T13:37:33.453Z] Session [95e8e910-f700-11e8-b4d9-6f05463d5eb4] - page.onError - stack:
+  Jt (http://172.20.4.233:8080/turbuscl/main.js:1)
+[ERROR - 2018-12-03T13:37:33.459Z] Session [95e8e910-f700-11e8-b4d9-6f05463d5eb4] - page.onError - msg: ERROR TypeError: undefined is not a constructor (evaluating 'n.startsWith(t)')
+[ERROR - 2018-12-03T13:37:33.459Z] Session [95e8e910-f700-11e8-b4d9-6f05463d5eb4] - page.onError - stack:
+  Jt (http://172.20.4.233:8080/turbuscl/main.js:1)
+[ERROR - 2018-12-03T13:37:33.461Z] Session [95e8e910-f700-11e8-b4d9-6f05463d5eb4] - page.onError - msg: ERROR TypeError: undefined is not a constructor (evaluating 'Array(this.divCount).fill(0)')
+[ERROR - 2018-12-03T13:37:33.461Z] Session [95e8e910-f700-11e8-b4d9-6f05463d5eb4] - page.onError - stack:
+  Jt (http://172.20.4.233:8080/turbuscl/main.js:1)
+[ERROR - 2018-12-03T13:37:33.463Z] Session [95e8e910-f700-11e8-b4d9-6f05463d5eb4] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'n.startsWith(t)')
+[ERROR - 2018-12-03T13:37:33.463Z] Session [95e8e910-f700-11e8-b4d9-6f05463d5eb4] - page.onError - stack:
+  (anonymous function) (http://172.20.4.233:8080/turbuscl/main.js:1)
+[ERROR - 2018-12-03T13:37:33.469Z] Session [95e8e910-f700-11e8-b4d9-6f05463d5eb4] - page.onError - msg: ERROR TypeError: undefined is not a constructor (evaluating 'Array.from(this.normalizedNames.keys())')
+[ERROR - 2018-12-03T13:37:33.469Z] Session [95e8e910-f700-11e8-b4d9-6f05463d5eb4] - page.onError - stack:
+  Jt (http://172.20.4.233:8080/turbuscl/main.js:1)
+[ERROR - 2018-12-03T13:37:33.471Z] Session [95e8e910-f700-11e8-b4d9-6f05463d5eb4] - page.onError - msg: ERROR TypeError: undefined is not a constructor (evaluating 'Array.from(this.normalizedNames.keys())')
+[ERROR - 2018-12-03T13:37:33.471Z] Session [95e8e910-f700-11e8-b4d9-6f05463d5eb4] - page.onError - stack:
+  Jt (http://172.20.4.233:8080/turbuscl/main.js:1)
+[ERROR - 2018-12-03T13:37:33.570Z] Session [95e8e910-f700-11e8-b4d9-6f05463d5eb4] - page.onError - msg: ERROR TypeError: undefined is not a constructor (evaluating 'n.startsWith(t)')
+[ERROR - 2018-12-03T13:37:33.576Z] Session [95e8e910-f700-11e8-b4d9-6f05463d5eb4] - page.onError - stack:
+  Jt (http://172.20.4.233:8080/turbuscl/main.js:1)
+[ERROR - 2018-12-03T13:38:03.642Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1543844283598
+[INFO  - 2018-12-03T13:38:03.910Z] ShutdownReqHand - _handle - About to shutdown
