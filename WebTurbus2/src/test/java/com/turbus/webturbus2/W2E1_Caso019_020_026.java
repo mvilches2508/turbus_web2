@@ -13,7 +13,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class W2E1_Caso019_020 {
+public class W2E1_Caso019_020_026 {
 
     private WebDriver driver;
     private String baseUrl;
@@ -29,7 +29,7 @@ public class W2E1_Caso019_020 {
     }
 
     @Test
-    public void testW2E1_Caso019_020() throws Exception {
+    public void testW2E1_Caso019_020_026() throws Exception {
         driver.get(baseUrl);
         Thread.sleep(3000);
         driver.findElement(By.id("origen")).click();
