@@ -1,4 +1,4 @@
-package com.turbus.webturbus2;
+package com.turbus.webturbus2; /*@author Invabiz*/
 
 import java.io.File;
 import java.io.IOException;
@@ -8,6 +8,7 @@ import org.apache.commons.io.FileUtils;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 
@@ -22,7 +23,7 @@ public class W2E1_Caso013 {
     public void setUp() throws Exception {
         System.setProperty("webdriver.gecko.driver", "src/test/java/driver/geckodriver.exe");
         //System.setProperty("webdriver.chrome.driver", "src/test/java/driver/chromedriver.exe");
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         baseUrl = "http://172.20.4.233:8080/turbuscl/inicio-compra";
         driver.manage().window().maximize();
     }
