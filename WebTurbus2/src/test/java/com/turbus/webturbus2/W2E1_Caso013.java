@@ -21,8 +21,7 @@ public class W2E1_Caso013 {
 
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
-        System.setProperty("webdriver.gecko.driver", "src/test/java/driver/geckodriver.exe");
-        //System.setProperty("webdriver.chrome.driver", "src/test/java/driver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/test/java/driver/chromedriver.exe");
         driver = new ChromeDriver();
         baseUrl = "http://172.20.4.233:8080/turbuscl/inicio-compra";
         driver.manage().window().maximize();
@@ -30,8 +29,6 @@ public class W2E1_Caso013 {
 
     @Test
     public void testW2E1_Caso013() throws Exception {
-        java.util.logging.Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(java.util.logging.Level.OFF);
-        java.util.logging.Logger.getLogger("org.apache.http").setLevel(java.util.logging.Level.OFF);
         driver.get(baseUrl);
         Thread.sleep(3000);
         getFoto(driver);
