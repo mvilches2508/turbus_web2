@@ -13,7 +13,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class W2E1_Caso028_029 {
+public class W2E1_Caso028_029_030_031 {
 
     private WebDriver driver;
     private String baseUrl;
@@ -29,7 +29,7 @@ public class W2E1_Caso028_029 {
     }
 
     @Test
-    public void testW2E1_Caso028_029() throws Exception {
+    public void testW2E1_Caso028_029_030_031() throws Exception {
         driver.get(baseUrl);
         Thread.sleep(3000);
         driver.findElement(By.id("origen")).click();
@@ -132,12 +132,18 @@ public class W2E1_Caso028_029 {
         driver.findElement(By.xpath("/html/body/app-root/app-seleccion-asiento/main/div/div/div[1]/div/div/div[2]/div/button")).click();
         getFoto(driver);
         Thread.sleep(8000);
-        if(driver.findElement(By.id("pay")).isEnabled()){
+        if (driver.findElement(By.id("pay")).isEnabled()) {
             System.out.println("Error, permite continuar sin agregar datos del comprador");
+            element = null;
+            element = driver.findElement(By.id("pay"));
+            js.executeScript("arguments[0].scrollIntoView();", element);
             getFoto(driver);
-        }else{
-             System.out.println("Verificación exitosa, no permite continuar la compra sin agregar datos del comprador");
-             getFoto(driver);
+        } else {
+            System.out.println("Verificación exitosa, no permite continuar la compra sin agregar datos del comprador");
+            element = null;
+            element = driver.findElement(By.id("pay"));
+            js.executeScript("arguments[0].scrollIntoView();", element);
+            getFoto(driver);
         }
     }
 
@@ -185,7 +191,7 @@ public class W2E1_Caso028_029 {
 
     private void getFoto(WebDriver webDriver) {
         try {
-            File path = new File("D:\\Git\\turbus_web2\\Evidencia\\W2E1_Caso028_029");
+            File path = new File("D:\\Git\\turbus_web2\\Evidencia\\W2E1_Caso028_029_030_031");
             path.mkdir();
             Date d = new Date();
             SimpleDateFormat sd = new SimpleDateFormat("dd_MM_yy_HH_mm_ss_a");
