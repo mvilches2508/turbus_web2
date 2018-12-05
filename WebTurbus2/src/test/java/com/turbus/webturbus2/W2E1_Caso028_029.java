@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.testng.annotations.*;
@@ -12,7 +13,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class W2E1_Caso021_022_023_024_025 {
+public class W2E1_Caso028_029 {
 
     private WebDriver driver;
     private String baseUrl;
@@ -28,14 +29,14 @@ public class W2E1_Caso021_022_023_024_025 {
     }
 
     @Test
-    public void testW2E1_Caso021_022_023_024_025() throws Exception {
+    public void testW2E1_Caso028_029() throws Exception {
         driver.get(baseUrl);
         Thread.sleep(3000);
         driver.findElement(By.id("origen")).click();
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ingrese ciudad de origen'])[2]/following::input[1]")).clear();
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ingrese ciudad de origen'])[2]/following::input[1]")).sendKeys("Santiago");
+        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ingrese ciudad de origen'])[2]/following::input[1]")).sendKeys("santiago");
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ciudad de origen'])[1]/following::li[1]")).click();
@@ -57,106 +58,87 @@ public class W2E1_Caso021_022_023_024_025 {
         driver.findElement(By.id("fechaIda")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='do'])[1]/following::div[35]")).click();
+        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='do'])[1]/following::div[36]")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.id("buscarPasaje")).click();
+        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='-'])[1]/following::button[1]")).click();
         getFoto(driver);
-        Thread.sleep(5000);
+        Thread.sleep(1000);
         try {
-            assertEquals(driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='PASAJEROS'])[1]/preceding::div[2]")).getText(), "ITINERARIO");
-            getFoto(driver);
-            Thread.sleep(1000);
-            System.out.println(driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='PASAJEROS'])[1]/preceding::div[2]")).getText());
+            assertEquals(driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='-'])[1]/following::strong[1]")).getText(), "2");
+            System.out.println(driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='-'])[1]/following::strong[1]")).getText());
         } catch (Error e) {
             verificationErrors.append(e.toString());
         }
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='jornada mañana'])[1]/following::div[5]")).click();
+        driver.findElement(By.id("buscarPasaje")).click();
         getFoto(driver);
-        Thread.sleep(1000);
+        Thread.sleep(10000);
+        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Santiago - Stgo.T.Alameda TB'])[1]/following::div[1]")).click();
+        getFoto(driver);
+        Thread.sleep(2000);
         try {
             assertEquals(driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ver detalle de ruta en mapa'])[2]/following::a[1]")).getText(), "SELECCIONAR PASAJE");
             System.out.println(driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ver detalle de ruta en mapa'])[2]/following::a[1]")).getText());
-            getFoto(driver);
-            Thread.sleep(1000);
         } catch (Error e) {
             verificationErrors.append(e.toString());
         }
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ver detalle de ruta en mapa'])[2]/following::a[1]")).click();
         getFoto(driver);
         Thread.sleep(3000);
-        try {
-            assertEquals(driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='RUT'])[2]/following::p[1]")).getText(), "Debe ingresar un RUT");
-            System.out.println("Mensaje encontrado: " + driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='RUT'])[2]/following::p[1]")).getText());
-            getFoto(driver);
-            Thread.sleep(1000);
-        } catch (Error e) {
-            verificationErrors.append(e.toString());
-        }
-        try {
-            assertEquals(driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='NOMBRE'])[1]/following::p[1]")).getText(), "Debe ingresar un nombre");
-            System.out.println("Mensaje encontrado: " + driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='NOMBRE'])[1]/following::p[1]")).getText());
-        } catch (Error e) {
-            verificationErrors.append(e.toString());
-        }
-        try {
-            assertEquals(driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='APELLIDO'])[1]/following::p[1]")).getText(), "Debe ingresar un apellido");
-            System.out.println("Mensaje encontrado: " + driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='APELLIDO'])[1]/following::p[1]")).getText());
-        } catch (Error e) {
-            verificationErrors.append(e.toString());
-        }
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='RUT'])[1]/following::span[1]")).click();
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='DNI / PASAPORTE'])[2]/following::p[1]")).click();
-        getFoto(driver);
-        Thread.sleep(1000);
-        try {
-            assertEquals(driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='DNI / PASAPORTE'])[2]/following::p[1]")).getText(), "Debe ingresar un DNI");
-            System.out.println("Mensaje encontrado: " + driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='DNI / PASAPORTE'])[2]/following::p[1]")).getText());
-        } catch (Error e) {
-            verificationErrors.append(e.toString());
-        }
         driver.findElement(By.id("idPersona")).clear();
-        driver.findElement(By.id("idPersona")).sendKeys("117822789");
+        driver.findElement(By.id("idPersona")).sendKeys("16759150-7");
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.id("nombrePasajero")).clear();
-        driver.findElement(By.id("nombrePasajero")).sendKeys("Daniela");
+        driver.findElement(By.id("nombrePasajero")).sendKeys("Alejandra");
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.id("apellidoPasajero")).clear();
-        driver.findElement(By.id("apellidoPasajero")).sendKeys("Perez");
+        driver.findElement(By.id("apellidoPasajero")).sendKeys("gonzalez");
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Clasico C.'])[1]/following::button[1]")).click();
+        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='RUT'])[4]/following::input[1]")).clear();
+        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='RUT'])[4]/following::input[1]")).sendKeys("14159070-7");
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='CONTINUAR'])[1]/following::h2[1]")).click();
+        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='NOMBRE'])[2]/following::input[1]")).clear();
+        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='NOMBRE'])[2]/following::input[1]")).sendKeys("Daniel");
         getFoto(driver);
         Thread.sleep(1000);
-        try {
-            assertEquals(driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='CONTINUAR'])[1]/following::h2[1]")).getText(), "ESCOGE TU ASIENTO DE IDA");
+        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='APELLIDO'])[2]/following::input[1]")).clear();
+        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='APELLIDO'])[2]/following::input[1]")).sendKeys("Marquez");
+        getFoto(driver);
+        Thread.sleep(1000);
+        WebElement element = driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='CONTINUAR'])[1]/following::h2[1]"));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", element);
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("/html/body/app-root/app-ingresa-pasajero/main/div/div/div[1]/div/div/div/div[2]/button")).click();
+        getFoto(driver);
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//div[2]/div[3]/div/div/div")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("/html/body/app-root/app-seleccion-asiento/main/div/div/div[1]/div/div/div[2]/div/button")).click();
+        getFoto(driver);
+        Thread.sleep(8000);
+        if(driver.findElement(By.id("pay")).isEnabled()){
+            System.out.println("Error, permite continuar sin agregar datos del comprador");
             getFoto(driver);
-            Thread.sleep(1000);
-        } catch (Error e) {
-            verificationErrors.append(e.toString());
+        }else{
+             System.out.println("Verificación exitosa, no permite continuar la compra sin agregar datos del comprador");
+             getFoto(driver);
         }
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Clasico C.'])[1]/following::button[1]")).click();
-        getFoto(driver);
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='ERROR'])[1]/following::p[1]")).click();
-        getFoto(driver);
-        Thread.sleep(1000);
-        try {
-            assertEquals(driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='ERROR'])[1]/following::p[1]")).getText(), "Debe seleccionar sus asientos antes de continuar.");
-            System.out.println("Mensaje: " + driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='ERROR'])[1]/following::p[1]")).getText());
-            getFoto(driver);
-            Thread.sleep(1000);
-        } catch (Error e) {
-            verificationErrors.append(e.toString());
-        }
-        driver.findElement(By.xpath("/html/body/app-root/app-seleccion-asiento/app-popup-error/div/div/div/div[2]/a")).click();
-        getFoto(driver);
-        Thread.sleep(1000);
     }
 
     @AfterClass(alwaysRun = true)
@@ -203,7 +185,7 @@ public class W2E1_Caso021_022_023_024_025 {
 
     private void getFoto(WebDriver webDriver) {
         try {
-            File path = new File("D:\\Git\\turbus_web2\\Evidencia\\W2E1_Caso020_021_022_023_024_025");
+            File path = new File("D:\\Git\\turbus_web2\\Evidencia\\W2E1_Caso028_029");
             path.mkdir();
             Date d = new Date();
             SimpleDateFormat sd = new SimpleDateFormat("dd_MM_yy_HH_mm_ss_a");
