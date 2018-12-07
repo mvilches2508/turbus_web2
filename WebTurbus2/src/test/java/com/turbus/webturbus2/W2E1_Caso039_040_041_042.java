@@ -85,7 +85,7 @@ public class W2E1_Caso039_040_041_042 {
         Thread.sleep(1000);
         driver.findElement(By.xpath("//div[2]/div[3]/a")).click();
         getFoto(driver);
-        Thread.sleep(15000);
+        Thread.sleep(20000);
         driver.findElement(By.xpath("//app-itinerario/div/div/div[2]/div/div/div[2]")).click();
         getFoto(driver);
         Thread.sleep(1000);
