@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="com.turbus_WebTurbus2_jar_1.0">
+     <test name="Casos Funcionales suite Web2.0">
+        <packages>
+            <package name="com.turbus.webturbus2"/>
+            <classes>
+                <class name="com.turbus.webturbus2.W2E1_Caso013"/>
+                <class name="com.turbus.webturbus2.W2E1_Caso014"/>   
+                <class name="com.turbus.webturbus2.W2E1_Caso015_016_017_018"/>
+                <class name="com.turbus.webturbus2.W2E1_Caso019_020_026"/>   
+                <class name="com.turbus.webturbus2.W2E1_Caso021_022_023_024_025_027"/>
+                <class name="com.turbus.webturbus2.W2E1_Caso028_029_030_031"/>   
+                <class name="com.turbus.webturbus2.W2E1_Caso032_033_034"/>
+                <class name="com.turbus.webturbus2.W2E1_Caso035"/>   
+                <class name="com.turbus.webturbus2.W2E1_Caso039_040_041_042"/>
+                <class name="com.turbus.webturbus2.W2E1_Caso045"/>               
+                <class name="com.turbus.webturbus2.W2E1_Caso046_047_048_049_050_051"/>             
+            </classes>
+        </packages>
+    </test>
+
+</suite>
