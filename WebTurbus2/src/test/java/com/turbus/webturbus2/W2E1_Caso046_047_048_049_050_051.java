@@ -59,10 +59,10 @@ public class W2E1_Caso046_047_048_049_050_051 {
         driver.findElement(By.id("fechaIda")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//tr[5]/td[3]/div")).click();
+        driver.findElement(By.xpath("//tr[4]/td[2]/div")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//tr[5]/td[6]/div")).click();
+        driver.findElement(By.xpath("//tr[4]/td[6]/div")).click();
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//span[3]/button")).click();
@@ -118,13 +118,13 @@ public class W2E1_Caso046_047_048_049_050_051 {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,-1000)");
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[2]/div[3]/div/div/div")).click();
+        driver.findElement(By.xpath("//div[4]/div/div/div")).click();
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();
+        driver.findElement(By.xpath("//div[4]/div[2]/div/div")).click();
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
@@ -134,13 +134,13 @@ public class W2E1_Caso046_047_048_049_050_051 {
         driver.findElement(By.xpath("//button")).click();
         getFoto(driver);
         Thread.sleep(8000);
-        driver.findElement(By.xpath("//div[4]/div/div")).click();
+        driver.findElement(By.xpath("//div[2]/div[3]/div/div/div")).click();
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[5]/div/div")).click();
+        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
@@ -160,6 +160,9 @@ public class W2E1_Caso046_047_048_049_050_051 {
             verificationErrors.append(e.toString());
         }
         driver.findElement(By.id("nombreComprador")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.id("nombreComprador")).clear();
+        driver.findElement(By.id("nombreComprador")).sendKeys("a");
         getFoto(driver);
         Thread.sleep(1000);
         try {
@@ -191,6 +194,10 @@ public class W2E1_Caso046_047_048_049_050_051 {
         } catch (Error e) {
             verificationErrors.append(e.toString());
         }
+        driver.findElement(By.id("rut")).clear();
+        driver.findElement(By.id("rut")).sendKeys("12");
+        getFoto(driver);
+        Thread.sleep(1000);
         try {
             assertEquals(driver.findElement(By.xpath("//div[5]/div/div/div/div/p")).getText(), "Debe ingresar un RUT valido");
             getFoto(driver);
@@ -198,6 +205,10 @@ public class W2E1_Caso046_047_048_049_050_051 {
         } catch (Error e) {
             verificationErrors.append(e.toString());
         }
+        driver.findElement(By.id("phone")).clear();
+        driver.findElement(By.id("phone")).sendKeys("1");
+        getFoto(driver);
+        Thread.sleep(1000);
         try {
             assertEquals(driver.findElement(By.xpath("//div[6]/div/div/div/div/p")).getText(), "Debe ingresar un numero de telefono");
             getFoto(driver);
@@ -205,6 +216,10 @@ public class W2E1_Caso046_047_048_049_050_051 {
         } catch (Error e) {
             verificationErrors.append(e.toString());
         }
+        driver.findElement(By.id("email")).clear();
+        driver.findElement(By.id("email")).sendKeys("ds");
+        getFoto(driver);
+        Thread.sleep(1000);
         try {
             assertEquals(driver.findElement(By.xpath("//div[7]/div/div/div/div/p")).getText(), "Debe ingresar un correo electronico valido");
             getFoto(driver);
@@ -212,7 +227,6 @@ public class W2E1_Caso046_047_048_049_050_051 {
         } catch (Error e) {
             verificationErrors.append(e.toString());
         }
-        js.executeScript("window.scrollBy(0,-1000)");
         if (driver.findElement(By.id("pay")).isEnabled()) {
             getFoto(driver);
             System.out.println("Permite continuar con el pago sin agregar datos del comprador");
