@@ -32,8 +32,8 @@ public class W2E1_Caso035 {
     public void testPrueba() throws Exception {
         driver.get(baseUrl);
         Thread.sleep(3000);
-        driver.findElement(By.id("origen")).click();
         getFoto(driver);
+        driver.findElement(By.id("origen")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("//div/div/div/label/input")).clear();
         driver.findElement(By.xpath("//div/div/div/label/input")).sendKeys("santiago");

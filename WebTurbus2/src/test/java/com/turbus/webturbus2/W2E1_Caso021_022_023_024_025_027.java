@@ -31,8 +31,8 @@ public class W2E1_Caso021_022_023_024_025_027 {
     public void testW2E1_Caso021_022_023_024_025_027() throws Exception {
         driver.get(baseUrl);
         Thread.sleep(3000);
-        driver.findElement(By.id("origen")).click();
         getFoto(driver);
+        driver.findElement(By.id("origen")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ingrese ciudad de origen'])[2]/following::input[1]")).clear();
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ingrese ciudad de origen'])[2]/following::input[1]")).sendKeys("Santiago");
