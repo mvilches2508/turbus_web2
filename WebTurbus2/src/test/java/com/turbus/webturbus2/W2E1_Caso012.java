@@ -16,7 +16,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-public class W2E1_Caso011 {
+public class W2E1_Caso012 {
 
     private WebDriver driver;
     private String baseUrl;
@@ -30,9 +30,9 @@ public class W2E1_Caso011 {
         baseUrl = "http://172.20.4.233:8080/turbuscl/inicio-compra";
         driver.manage().window().maximize();
     }
-    
+
     @Test
-    public void testW2E1_Caso011() throws Exception {
+    public void testW2E1_Caso012() throws Exception {
         Robot robot = new Robot();
         driver.get(baseUrl);
         Thread.sleep(3000);
@@ -40,7 +40,7 @@ public class W2E1_Caso011 {
         driver.findElement(By.id("origen")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("//div/div/div/label/input")).clear();
-        driver.findElement(By.xpath("//div/div/div/label/input")).sendKeys("santiago");
+        driver.findElement(By.xpath("//div/div/div/label/input")).sendKeys("Santiago");
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//div[2]/div[2]/ul/li")).click();
@@ -50,7 +50,7 @@ public class W2E1_Caso011 {
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//div/div/div/label/input")).clear();
-        driver.findElement(By.xpath("//div/div/div/label/input")).sendKeys("temuco");
+        driver.findElement(By.xpath("//div/div/div/label/input")).sendKeys("Antofagasta");
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//div[2]/div[2]/ul/li")).click();
@@ -63,6 +63,27 @@ public class W2E1_Caso011 {
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//tr[5]/td[5]/div")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//span[3]/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//span[3]/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//span[3]/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//span[3]/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//span[3]/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//span[3]/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//span[3]/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//span[3]/button")).click();
@@ -159,7 +180,91 @@ public class W2E1_Caso011 {
         driver.findElement(By.xpath("//div[5]/div[4]/label/input")).sendKeys("Perez");
         getFoto(driver);
         Thread.sleep(1000);
-        js.executeScript("window.scrollBy(0,-1250)");
+        driver.findElement(By.xpath("//div[6]/div[2]/label/input")).clear();
+        driver.findElement(By.xpath("//div[6]/div[2]/label/input")).sendKeys("164292444");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[6]/div[3]/label/input")).clear();
+        driver.findElement(By.xpath("//div[6]/div[3]/label/input")).sendKeys("Monica");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[6]/div[4]/label/input")).clear();
+        driver.findElement(By.xpath("//div[6]/div[4]/label/input")).sendKeys("Perez");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[7]/div[2]/label/input")).clear();
+        driver.findElement(By.xpath("//div[7]/div[2]/label/input")).sendKeys("256785226");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[7]/div[3]/label/input")).clear();
+        driver.findElement(By.xpath("//div[7]/div[3]/label/input")).sendKeys("Miguel");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[7]/div[4]/label/input")).clear();
+        driver.findElement(By.xpath("//div[7]/div[4]/label/input")).sendKeys("Perez");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[8]/div[2]/label/input")).clear();
+        driver.findElement(By.xpath("//div[8]/div[2]/label/input")).sendKeys("256785234");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[8]/div[3]/label/input")).clear();
+        driver.findElement(By.xpath("//div[8]/div[3]/label/input")).sendKeys("Mariangel");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[8]/div[4]/label/input")).clear();
+        driver.findElement(By.xpath("//div[8]/div[4]/label/input")).sendKeys("Perez");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[9]/div[2]/label/input")).clear();
+        driver.findElement(By.xpath("//div[9]/div[2]/label/input")).sendKeys("256785242");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[9]/div[3]/label/input")).clear();
+        driver.findElement(By.xpath("//div[9]/div[3]/label/input")).sendKeys("Carolina");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[9]/div[4]/label/input")).clear();
+        driver.findElement(By.xpath("//div[9]/div[4]/label/input")).sendKeys("Perez");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[10]/div[2]/label/input")).clear();
+        driver.findElement(By.xpath("//div[10]/div[2]/label/input")).sendKeys("256785250");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[10]/div[3]/label/input")).clear();
+        driver.findElement(By.xpath("//div[10]/div[3]/label/input")).sendKeys("Elizabeth");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[10]/div[4]/label/input")).clear();
+        driver.findElement(By.xpath("//div[10]/div[4]/label/input")).sendKeys("Perez");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[11]/div[2]/label/input")).clear();
+        driver.findElement(By.xpath("//div[11]/div[2]/label/input")).sendKeys("256785269");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[11]/div[3]/label/input")).clear();
+        driver.findElement(By.xpath("//div[11]/div[3]/label/input")).sendKeys("Pablo");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[11]/div[4]/label/input")).clear();
+        driver.findElement(By.xpath("//div[11]/div[4]/label/input")).sendKeys("Perez");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[12]/div[2]/label/input")).clear();
+        driver.findElement(By.xpath("//div[12]/div[2]/label/input")).sendKeys("256785277");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[12]/div[3]/label/input")).clear();
+        driver.findElement(By.xpath("//div[12]/div[3]/label/input")).sendKeys("Patricia");
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[12]/div[4]/label/input")).clear();
+        driver.findElement(By.xpath("//div[12]/div[4]/label/input")).sendKeys("Perez");
+        getFoto(driver);
+        Thread.sleep(1000);
+        js.executeScript("window.scrollBy(0,-1700)");
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//button")).click();
@@ -197,7 +302,49 @@ public class W2E1_Caso011 {
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        js.executeScript("window.scrollBy(0,1200)");
+        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();//Selección asiento ida pasajero 6
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();//Selección asiento ida pasajero 7
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();//Selección asiento ida pasajero 8
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();//Selección asiento ida pasajero 9
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();//Selección asiento ida pasajero 10
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();//Selección asiento ida pasajero 11
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();//Selección asiento ida pasajero 12
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        js.executeScript("window.scrollBy(0,1500)");
         Thread.sleep(1000);
         driver.findElement(By.xpath("//button")).click();
         getFoto(driver);
@@ -227,6 +374,48 @@ public class W2E1_Caso011 {
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//div[4]/div/div/div")).click();//Selección asiento vuelta pasajero 5
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[4]/div/div/div")).click();//Selección asiento vuelta pasajero 6
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[4]/div/div/div")).click();//Selección asiento vuelta pasajero 7
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[4]/div/div/div")).click();//Selección asiento vuelta pasajero 8
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[4]/div/div/div")).click();//Selección asiento vuelta pasajero 9
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[4]/div/div/div")).click();//Selección asiento vuelta pasajero 10
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[4]/div/div/div")).click();//Selección asiento vuelta pasajero 11
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li/button")).click();
+        getFoto(driver);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[4]/div/div/div")).click();//Selección asiento vuelta pasajero 12
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
@@ -327,7 +516,7 @@ public class W2E1_Caso011 {
             return false;
         }
     }
-    
+
     private boolean isAlertPresent() {
         try {
             driver.switchTo().alert();
@@ -354,7 +543,7 @@ public class W2E1_Caso011 {
 
     private void getFoto(WebDriver webDriver) {
         try {
-            File path = new File("src/test/java/evidencia/W2E1_Caso011");
+            File path = new File("src/test/java/evidencia/W2E1_Caso012");
             path.mkdir();
             Date d = new Date();
             SimpleDateFormat sd = new SimpleDateFormat("dd_MM_yy_HH_mm_ss_a");
