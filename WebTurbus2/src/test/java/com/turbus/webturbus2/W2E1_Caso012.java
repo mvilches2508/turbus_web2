@@ -264,7 +264,7 @@ public class W2E1_Caso012 {
         driver.findElement(By.xpath("//div[12]/div[4]/label/input")).sendKeys("Perez");
         getFoto(driver);
         Thread.sleep(1000);
-        js.executeScript("window.scrollBy(0,-1700)");
+        js.executeScript("window.scrollBy(0,-4200)");
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//button")).click();
@@ -272,55 +272,55 @@ public class W2E1_Caso012 {
         Thread.sleep(8000);
         js.executeScript("window.scrollBy(0,-800)");
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[2]/div[2]/div[2]/div[2]/div/div")).click();//Selección asiento ida pasajero 1
+        driver.findElement(By.xpath("//div[2]/div/div[2]/div[2]/div/div/div/div")).click();//Selección asiento ida pasajero 1
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[4]/div/div")).click();//Selección asiento ida pasajero 2
+        driver.findElement(By.xpath("//div[2]/div/div[2]/div[2]/div/div[2]/div/div")).click();//Selección asiento ida pasajero 2
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[5]/div/div")).click();//Selección asiento ida pasajero 3
+        driver.findElement(By.xpath("//div[4]/div/div")).click();//Selección asiento ida pasajero 3
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[2]/div[3]/div/div/div")).click();//Selección asiento ida pasajero 4
+        driver.findElement(By.xpath("//div[5]/div/div")).click();//Selección asiento ida pasajero 4
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();//Selección asiento ida pasajero 5
+        driver.findElement(By.xpath("//div[2]/div[2]/div[2]/div/div/div")).click();//Selección asiento ida pasajero 5
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();//Selección asiento ida pasajero 6
+        driver.findElement(By.xpath("//div[2]/div[2]/div[2]/div[2]/div/div")).click();//Selección asiento ida pasajero 6
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();//Selección asiento ida pasajero 7
+        driver.findElement(By.xpath("//div[2]/div[4]/div/div")).click();//Selección asiento ida pasajero 7
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();//Selección asiento ida pasajero 8
+        driver.findElement(By.xpath("//div[2]/div[5]/div/div")).click();//Selección asiento ida pasajero 8
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();//Selección asiento ida pasajero 9
+        driver.findElement(By.xpath("//div[2]/div[3]/div/div/div")).click();//Selección asiento ida pasajero 9
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
@@ -332,19 +332,19 @@ public class W2E1_Caso012 {
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();//Selección asiento ida pasajero 11
+        driver.findElement(By.xpath("//div[4]/div/div/div")).click();//Selección asiento ida pasajero 11
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();//Selección asiento ida pasajero 12
+        driver.findElement(By.xpath("//div[4]/div[2]/div/div")).click();//Selección asiento ida pasajero 12
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        js.executeScript("window.scrollBy(0,1500)");
+        js.executeScript("window.scrollBy(0,1200)");
         Thread.sleep(1000);
         driver.findElement(By.xpath("//button")).click();
         getFoto(driver);
@@ -355,55 +355,55 @@ public class W2E1_Caso012 {
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[2]/div[2]/div[2]/div/div/div")).click();//Selección asiento vuelta pasajero 2
+        driver.findElement(By.xpath("//div[2]/div/div[2]/div[2]/div/div[2]/div/div")).click();//Selección asiento vuelta pasajero 2
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[2]/div[3]/div/div/div")).click();//Selección asiento vuelta pasajero 3
+        driver.findElement(By.xpath("//div[4]/div/div")).click();//Selección asiento vuelta pasajero 3
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();//Selección asiento vuelta pasajero 4
+        driver.findElement(By.xpath("//div[5]/div/div")).click();//Selección asiento vuelta pasajero 4
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[4]/div/div/div")).click();//Selección asiento vuelta pasajero 5
+        driver.findElement(By.xpath("//div[2]/div[2]/div[2]/div/div/div")).click();//Selección asiento vuelta pasajero 5
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[4]/div/div/div")).click();//Selección asiento vuelta pasajero 6
+        driver.findElement(By.xpath("//div[2]/div[2]/div[2]/div[2]/div/div")).click();//Selección asiento vuelta pasajero 6
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[4]/div/div/div")).click();//Selección asiento vuelta pasajero 7
+        driver.findElement(By.xpath("//div[2]/div[4]/div/div")).click();//Selección asiento vuelta pasajero 7
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[4]/div/div/div")).click();//Selección asiento vuelta pasajero 8
+        driver.findElement(By.xpath("//div[2]/div[5]/div/div")).click();//Selección asiento vuelta pasajero 8
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[4]/div/div/div")).click();//Selección asiento vuelta pasajero 9
+        driver.findElement(By.xpath("//div[2]/div[3]/div/div/div")).click();//Selección asiento vuelta pasajero 9
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[4]/div/div/div")).click();//Selección asiento vuelta pasajero 10
+        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();//Selección asiento vuelta pasajero 10
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
@@ -415,7 +415,7 @@ public class W2E1_Caso012 {
         driver.findElement(By.xpath("//li/button")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[4]/div/div/div")).click();//Selección asiento vuelta pasajero 12
+        driver.findElement(By.xpath("//div[4]/div[2]/div/div")).click();//Selección asiento vuelta pasajero 12
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
@@ -485,7 +485,7 @@ public class W2E1_Caso012 {
         driver.findElement(By.xpath("//td/input")).click();
         getFoto(driver);
         driver.switchTo().defaultContent();
-        Thread.sleep(58000);
+        Thread.sleep(70000);
         try {
             assertEquals(driver.findElement(By.xpath("//h2")).getText(), "TU COMPRA HA SIDO REALIZADA CON ÉXITO");
             System.out.println(driver.findElement(By.xpath("//h2")).getText());
