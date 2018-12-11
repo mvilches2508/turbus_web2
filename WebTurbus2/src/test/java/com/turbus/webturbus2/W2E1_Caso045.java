@@ -106,7 +106,7 @@ public class W2E1_Caso045 {
         getFoto(driver);
         Thread.sleep(5000);
         driver.findElement(By.id("idPersona")).clear();
-        driver.findElement(By.id("idPersona")).sendKeys("19");
+        driver.findElement(By.id("idPersona")).sendKeys("256785315");
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.id("nombrePasajero")).clear();
@@ -118,7 +118,7 @@ public class W2E1_Caso045 {
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//div[2]/div[2]/label/input")).clear();
-        driver.findElement(By.xpath("//div[2]/div[2]/label/input")).sendKeys("27");
+        driver.findElement(By.xpath("//div[2]/div[2]/label/input")).sendKeys("167591507");
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//div[2]/div[3]/label/input")).clear();
