@@ -53,8 +53,10 @@ public class W2E1_Caso014 {
         Thread.sleep(1000);
         if(driver.findElement(By.id("buscarPasaje")).isEnabled()){
             System.out.println("Error");
+            getFoto(driver);
         }else{
-            System.out.println("No es posible continuar con la compra del boleto ya que no ha ingresado cuidad destino");            
+            System.out.println("No es posible continuar con la compra del boleto ya que no ha ingresado cuidad destino");
+            getFoto(driver);
         }
     }
 
@@ -102,7 +104,7 @@ public class W2E1_Caso014 {
 
     private void getFoto(WebDriver webDriver) {
         try {
-            File path = new File("D:\\Git\\turbus_web2\\Evidencia\\W2E1_Caso014");
+            File path = new File("src/test/java/evidencia/W2E1_Caso014");
             path.mkdir();
             Date d = new Date();
             SimpleDateFormat sd = new SimpleDateFormat("dd_MM_yy_HH_mm_ss_a");

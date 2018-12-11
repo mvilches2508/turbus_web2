@@ -80,7 +80,7 @@ public class W2E1_Caso039_040_041_042 {
         robot.keyRelease(KeyEvent.VK_UP);
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//app-itinerario/div/div/div[2]/div/div/div[2]")).click();
+        driver.findElement(By.xpath("//app-itinerario/div/div/div[2]/div/div/div[2]")).click();//Selecciona itinerario
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//div[2]/div[3]/a")).click();
@@ -92,34 +92,33 @@ public class W2E1_Caso039_040_041_042 {
         driver.findElement(By.xpath("//div[2]/div[3]/a")).click();
         getFoto(driver);
         Thread.sleep(5000);
+        driver.findElement(By.id("idPersona")).sendKeys("11");
+        getFoto(driver);
+        Thread.sleep(1000);
         try {
-            assertEquals(driver.findElement(By.xpath("//form/div/div[2]/div/p")).getText(), "Debe ingresar un RUT");
+            assertEquals(driver.findElement(By.xpath("//form/div/div[2]/div/div/p")).getText(), "Debe ingresar un RUT");
+            System.out.println("Mensaje encontrado: " + driver.findElement(By.xpath("//form/div/div[2]/div/div/p")).getText());
             getFoto(driver);
-            System.out.println(driver.findElement(By.xpath("//form/div/div[2]/div/p")).getText());
             Thread.sleep(1000);
         } catch (Error e) {
             verificationErrors.append(e.toString());
         }
+        driver.findElement(By.id("nombrePasajero")).sendKeys("Da");
+        Thread.sleep(1000);
         try {
-            assertEquals(driver.findElement(By.xpath("//div[3]/div/p")).getText(), "Debe ingresar un nombre");
+            assertEquals(driver.findElement(By.xpath("//div[3]/div/div/p")).getText(), "Debe ingresar un nombre");
+            System.out.println("Mensaje encontrado: " + driver.findElement(By.xpath("//div[3]/div/div/p")).getText());
             getFoto(driver);
-            System.out.println(driver.findElement(By.xpath("//div[3]/div/p")).getText());
             Thread.sleep(1000);
         } catch (Error e) {
             verificationErrors.append(e.toString());
         }
+        driver.findElement(By.id("apellidoPasajero")).sendKeys("Pe");
+        Thread.sleep(1000);
         try {
-            assertEquals(driver.findElement(By.xpath("//div[4]/div/p")).getText(), "Debe ingresar un apellido");
+            assertEquals(driver.findElement(By.xpath("//div[4]/div/div/p")).getText(), "Debe ingresar un apellido");
             getFoto(driver);
-            System.out.println(driver.findElement(By.xpath("//div[4]/div/p")).getText());
-            Thread.sleep(1000);
-        } catch (Error e) {
-            verificationErrors.append(e.toString());
-        }
-        try {
-            assertEquals(driver.findElement(By.xpath("//div[4]/div/p")).getText(), "Debe ingresar un apellido");
-            getFoto(driver);
-            System.out.println(driver.findElement(By.xpath("//div[4]/div/p")).getText());
+            System.out.println("Mensaje encontrado: " + driver.findElement(By.xpath("//div[4]/div/div/p")).getText());
             Thread.sleep(1000);
         } catch (Error e) {
             verificationErrors.append(e.toString());
@@ -183,7 +182,7 @@ public class W2E1_Caso039_040_041_042 {
 
     private void getFoto(WebDriver webDriver) {
         try {
-            File path = new File("D:\\Git\\turbus_web2\\Evidencia\\W2E1_Caso039_040_041_042");
+            File path = new File("src/test/java/evidencia/W2E1_Caso039_040_041_042");
             path.mkdir();
             Date d = new Date();
             SimpleDateFormat sd = new SimpleDateFormat("dd_MM_yy_HH_mm_ss_a");

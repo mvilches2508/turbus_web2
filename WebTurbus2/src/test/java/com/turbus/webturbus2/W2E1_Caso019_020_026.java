@@ -70,8 +70,10 @@ public class W2E1_Caso019_020_026 {
         String txt = driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='-'])[1]/following::span[1]")).getText();
         if (txt.equals("0 PASAJE")) {
             System.out.println("Error, sistema permite ingresar cantidad de pasajes igual a 0");
+            getFoto(driver);
         } else {
             System.out.println("Validación exitosa, sistema no permite ingresar cantidad menor a: " + txt);
+            getFoto(driver);
         }
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='-'])[1]/following::button[1]")).click();
         getFoto(driver);
@@ -164,7 +166,7 @@ public class W2E1_Caso019_020_026 {
 
     private void getFoto(WebDriver webDriver) {
         try {
-            File path = new File("D:\\Git\\turbus_web2\\Evidencia\\W2E1_Caso019_020");
+            File path = new File("src/test/java/evidencia/W2E1_Caso019_020");
             path.mkdir();
             Date d = new Date();
             SimpleDateFormat sd = new SimpleDateFormat("dd_MM_yy_HH_mm_ss_a");

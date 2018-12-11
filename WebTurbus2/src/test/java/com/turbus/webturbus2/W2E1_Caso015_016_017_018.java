@@ -57,16 +57,20 @@ public class W2E1_Caso015_016_017_018 {
         Thread.sleep(1000);
         if (driver.findElement(By.id("buscarPasaje")).isEnabled()) {
             System.out.println("Error");
+            getFoto(driver);
         } else {
             System.out.println("Ingrese fecha para continuar con la compra (Ida)");
+            getFoto(driver);
         }
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='IDA'])[1]/following::span[1]")).click();
         getFoto(driver);
         Thread.sleep(1000);
         if (driver.findElement(By.id("buscarPasaje")).isEnabled()) {
             System.out.println("Error");
+            getFoto(driver);
         } else {
             System.out.println("Ingrese fecha para continuar con la compra (ida y Vuelta)");
+            getFoto(driver);
         }
     }
 
@@ -114,7 +118,7 @@ public class W2E1_Caso015_016_017_018 {
 
     private void getFoto(WebDriver webDriver) {
         try {
-            File path = new File("D:\\Git\\turbus_web2\\Evidencia\\W2E1_Caso015_016_017_018");
+            File path = new File("src/test/java/evidencia/W2E1_Caso015_016_017_018");
             path.mkdir();
             Date d = new Date();
             SimpleDateFormat sd = new SimpleDateFormat("dd_MM_yy_HH_mm_ss_a");

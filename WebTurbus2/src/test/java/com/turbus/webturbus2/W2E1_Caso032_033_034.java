@@ -61,7 +61,7 @@ public class W2E1_Caso032_033_034 {
         driver.findElement(By.id("fechaIda")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//tr[3]/td[4]/div")).click();
+        driver.findElement(By.xpath("//tr[4]/td[4]/div")).click();
         getFoto(driver);
         Thread.sleep(1000);
         try {
@@ -73,7 +73,7 @@ public class W2E1_Caso032_033_034 {
         }
         driver.findElement(By.id("buscarPasaje")).click();
         getFoto(driver);
-        Thread.sleep(9000);
+        Thread.sleep(18000);
         try {
             assertEquals(driver.findElement(By.xpath("//h2")).getText(), "SELECCIONA TU PASAJE DE IDA");
             System.out.println(driver.findElement(By.xpath("//h2")).getText());
@@ -134,17 +134,21 @@ public class W2E1_Caso032_033_034 {
         driver.findElement(By.id("dni")).sendKeys("3344556");
         getFoto(driver);
         Thread.sleep(1000);
+        driver.findElement(By.id("phone")).sendKeys("2");
+        Thread.sleep(1000);
         try {
-            assertEquals(driver.findElement(By.xpath("//div[6]/div/div/div/p")).getText(), "Debe ingresar un numero de telefono");
-            System.out.println(driver.findElement(By.xpath("//div[6]/div/div/div/p")).getText());
+            assertEquals(driver.findElement(By.xpath("//div[6]/div/div/div/div/p")).getText(), "Debe ingresar un numero de telefono");
+            System.out.println(driver.findElement(By.xpath("//div[6]/div/div/div/div/p")).getText());
             getFoto(driver);
             Thread.sleep(1000);
         } catch (Error e) {
             verificationErrors.append(e.toString());
         }
+        driver.findElement(By.id("email")).sendKeys("d");
+        Thread.sleep(1000);
         try {
-            assertEquals(driver.findElement(By.xpath("//div[7]/div/div/div/p")).getText(), "Debe ingresar un correo electronico valido");
-            System.out.println(driver.findElement(By.xpath("//div[7]/div/div/div/p")).getText());
+            assertEquals(driver.findElement(By.xpath("//div[7]/div/div/div/div/p")).getText(), "Debe ingresar un correo electronico valido");
+            System.out.println(driver.findElement(By.xpath("//div[7]/div/div/div/div/p")).getText());
             getFoto(driver);
             Thread.sleep(1000);
         } catch (Error e) {
@@ -211,7 +215,7 @@ public class W2E1_Caso032_033_034 {
 
     private void getFoto(WebDriver webDriver) {
         try {
-            File path = new File("D:\\Git\\turbus_web2\\Evidencia\\W2E1_Caso032_033_034");
+            File path = new File("src/test/java/evidencia/W2E1_Caso032_033_034");
             path.mkdir();
             Date d = new Date();
             SimpleDateFormat sd = new SimpleDateFormat("dd_MM_yy_HH_mm_ss_a");

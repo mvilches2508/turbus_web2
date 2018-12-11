@@ -43,6 +43,7 @@ public class W2E1_Caso013 {
         Thread.sleep(2000);
         try {
             assertEquals(driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ciudad de destino'])[1]/following::p[1]")).getText(), "Ciudades sugeridas");
+            getFoto(driver);
             System.out.println("No muestra opciones de ciudades, solo muestra el siguiente texto: " + driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ciudad de destino'])[1]/following::p[1]")).getText());
         } catch (Error e) {
             verificationErrors.append(e.toString());
@@ -94,7 +95,7 @@ public class W2E1_Caso013 {
 
     private void getFoto(WebDriver webDriver) {
         try {
-            File path = new File("D:\\Git\\turbus_web2\\Evidencia\\W2E1_Caso013");
+            File path = new File("src/test/java/evidencia/W2E1_Caso013");
             path.mkdir();
             Date d = new Date();
             SimpleDateFormat sd = new SimpleDateFormat("dd_MM_yy_HH_mm_ss_a");

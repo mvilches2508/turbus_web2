@@ -79,6 +79,7 @@ public class W2E1_Caso028_029_030_031 {
         try {
             assertEquals(driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ver detalle de ruta en mapa'])[2]/following::a[1]")).getText(), "SELECCIONAR PASAJE");
             System.out.println(driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ver detalle de ruta en mapa'])[2]/following::a[1]")).getText());
+            getFoto(driver);
         } catch (Error e) {
             verificationErrors.append(e.toString());
         }
@@ -191,7 +192,7 @@ public class W2E1_Caso028_029_030_031 {
 
     private void getFoto(WebDriver webDriver) {
         try {
-            File path = new File("D:\\Git\\turbus_web2\\Evidencia\\W2E1_Caso028_029_030_031");
+            File path = new File("src/test/java/evidencia/W2E1_Caso028_029_030_031");
             path.mkdir();
             Date d = new Date();
             SimpleDateFormat sd = new SimpleDateFormat("dd_MM_yy_HH_mm_ss_a");
