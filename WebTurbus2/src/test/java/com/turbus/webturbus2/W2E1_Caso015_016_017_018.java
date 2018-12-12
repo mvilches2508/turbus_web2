@@ -76,6 +76,8 @@ public class W2E1_Caso015_016_017_018 {
 
     @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {
+        getFoto(driver);
+        Thread.sleep(1000);
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {

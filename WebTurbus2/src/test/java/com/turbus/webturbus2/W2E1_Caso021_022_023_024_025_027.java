@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.testng.annotations.*;
@@ -54,10 +55,15 @@ public class W2E1_Caso021_022_023_024_025_027 {
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='TRAMOS'])[1]/following::span[1]")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.id("fechaIda")).click();
+        driver.findElement(By.id("fechaIda")).click();//Solo Ida
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='do'])[1]/following::div[35]")).click();
+        int dia = 0;
+        WebElement baseTable = driver.findElement(By.xpath("//*[@id=\"calendarSingle\"]/div/div[1]/table"));
+        List<WebElement> tableRows = baseTable.findElements(By.className("valid"));
+        tableRows.get(dia);
+        WebElement element =tableRows.get(dia);
+        element.click();
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.id("buscarPasaje")).click();
@@ -154,6 +160,8 @@ public class W2E1_Caso021_022_023_024_025_027 {
 
     @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {
+        getFoto(driver);
+        Thread.sleep(1000);
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
@@ -36,7 +37,7 @@ public class W2E1_Caso028_029_030_031 {
         driver.findElement(By.id("origen")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ingrese ciudad de origen'])[2]/following::input[1]")).clear();
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ingrese ciudad de origen'])[2]/following::input[1]")).sendKeys("santiago");
+        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ingrese ciudad de origen'])[2]/following::input[1]")).sendKeys("Santiago");
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ciudad de origen'])[1]/following::li[1]")).click();
@@ -52,13 +53,18 @@ public class W2E1_Caso028_029_030_031 {
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Ciudad de destino'])[1]/following::li[1]")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='TRAMOS'])[1]/following::span[1]")).click();
+        driver.findElement(By.xpath("//div[2]/div/label/span")).click();//solo ida
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.id("fechaIda")).click();
+        driver.findElement(By.id("fechaIda")).click();//Solo Ida
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='do'])[1]/following::div[36]")).click();
+        int dia = 0;
+        WebElement baseTable = driver.findElement(By.xpath("//*[@id=\"calendarSingle\"]/div/div[1]/table"));
+        List<WebElement> tableRows = baseTable.findElements(By.className("valid"));
+        tableRows.get(dia);
+        WebElement element =tableRows.get(dia);
+        element.click();
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='-'])[1]/following::button[1]")).click();
@@ -110,26 +116,28 @@ public class W2E1_Caso028_029_030_031 {
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='APELLIDO'])[2]/following::input[1]")).sendKeys("Marquez");
         getFoto(driver);
         Thread.sleep(1000);
-        WebElement element = driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='CONTINUAR'])[1]/following::h2[1]"));
+        element=null;
+        element = driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='CONTINUAR'])[1]/following::h2[1]"));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", element);
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/app-root/app-ingresa-pasajero/main/div/div/div[1]/div/div/div/div[2]/button")).click();
         getFoto(driver);
-        Thread.sleep(3000);
-        driver.findElement(By.xpath("//div[2]/div[3]/div/div/div")).click();
-        getFoto(driver);
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//li/button")).click();
-        getFoto(driver);
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[2]/div[3]/div[2]/div/div")).click();
-        getFoto(driver);
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//li/button")).click();
-        getFoto(driver);
-        Thread.sleep(1000);
+        Thread.sleep(6000);
+        int asientoIda = 2;
+        WebElement asientosIda = driver.findElement(By.className("bus_seat"));
+        List<WebElement> tableAsientos = asientosIda.findElements(By.className("seat-undefined"));
+        for (int i = 1; i <= asientoIda; i++) {
+            element=null;
+            element = tableAsientos.get(i);
+            element.click();
+            getFoto(driver);
+            Thread.sleep(1000);
+            driver.findElement(By.xpath("//li/button")).click();
+            getFoto(driver);
+            Thread.sleep(1000);
+        }
         driver.findElement(By.xpath("/html/body/app-root/app-seleccion-asiento/main/div/div/div[1]/div/div/div[2]/div/button")).click();
         getFoto(driver);
         Thread.sleep(8000);
@@ -150,6 +158,8 @@ public class W2E1_Caso028_029_030_031 {
 
     @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {
+        getFoto(driver);
+        Thread.sleep(1000);
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {

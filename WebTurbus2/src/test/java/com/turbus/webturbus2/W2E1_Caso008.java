@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
@@ -17,7 +18,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class W2E1_Caso008 {
-    
+
     private WebDriver driver;
     private String baseUrl;
     private boolean acceptNextAlert = true;
@@ -30,9 +31,9 @@ public class W2E1_Caso008 {
         baseUrl = "http://172.20.4.233:8080/turbuscl/inicio-compra";
         driver.manage().window().maximize();
     }
-    
+
     @Test
-    public void testW2E1_Caso045() throws Exception {
+    public void testW2E1_Caso008() throws Exception {
         Robot robot = new Robot();
         driver.get(baseUrl);
         Thread.sleep(3000);
@@ -56,13 +57,20 @@ public class W2E1_Caso008 {
         driver.findElement(By.xpath("//div[2]/div[2]/ul/li")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.id("fechaIda")).click();
+        driver.findElement(By.id("fechaIda")).click();//Itinerario ida y vuelta
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//tr[4]/td[2]/div")).click();
+        int dia = 0;
+        WebElement baseTable = driver.findElement(By.xpath("//*[@id=\"calendar\"]/div/div[1]/table"));
+        List<WebElement> tableRows = baseTable.findElements(By.className("valid"));
+        tableRows.get(dia);
+        WebElement element = tableRows.get(dia);
+        element.click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//tr[4]/td[5]/div")).click();
+        element = null;
+        element = tableRows.get(2);
+        element.click();
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//span[3]/button")).click();
@@ -118,37 +126,39 @@ public class W2E1_Caso008 {
         driver.findElement(By.xpath("//button")).click();
         getFoto(driver);
         Thread.sleep(5000);
-        driver.findElement(By.xpath("//div[2]/div/div[2]/div[2]/div/div/div/div")).click();
-        getFoto(driver);
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//li/button")).click();
-        getFoto(driver);
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[2]/div/div[2]/div[2]/div/div[2]/div/div")).click();
-        getFoto(driver);
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//li/button")).click();
-        getFoto(driver);
-        Thread.sleep(1000);
+        int asientoIda = 2;
+        WebElement asientosIda = driver.findElement(By.className("bus_seat"));
+        List<WebElement> tableAsientos = asientosIda.findElements(By.className("seat-undefined"));
+        for (int i = 1; i <= asientoIda; i++) {
+            element=null;
+            element = tableAsientos.get(i);
+            element.click();
+            getFoto(driver);
+            Thread.sleep(1000);
+            driver.findElement(By.xpath("//li/button")).click();
+            getFoto(driver);
+            Thread.sleep(1000);
+        }
         js.executeScript("window.scrollBy(0,850)");
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//button")).click();
         getFoto(driver);
         Thread.sleep(20000);
-        driver.findElement(By.xpath("//div[2]/div/div[2]/div[2]/div/div/div/div")).click();
-        getFoto(driver);
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//li/button")).click();
-        getFoto(driver);
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[2]/div/div[2]/div[2]/div/div[2]/div/div")).click();
-        getFoto(driver);
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//li/button")).click();
-        getFoto(driver);
-        Thread.sleep(1000);
-        js.executeScript("window.scrollBy(0,850)");
+        int asientoVuelta = 2;
+        WebElement asientosVuelta = driver.findElement(By.className("bus_seat"));
+        List<WebElement> tableAsientosVuelta = asientosVuelta.findElements(By.className("seat-undefined"));
+        for (int i = 1; i <= asientoVuelta; i++) {
+            element=null;
+            element = tableAsientosVuelta.get(i);
+            element.click();
+            getFoto(driver);
+            Thread.sleep(1000);
+            driver.findElement(By.xpath("//li/button")).click();
+            getFoto(driver);
+            Thread.sleep(1000);
+        }
+        js.executeScript("window.scrollBy(0,790)");
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//button")).click();
@@ -228,6 +238,8 @@ public class W2E1_Caso008 {
 
     @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {
+        getFoto(driver);
+        Thread.sleep(1000);
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {
@@ -282,5 +294,5 @@ public class W2E1_Caso008 {
             System.out.println("Error al capturar secuencia: " + ex);
         }
     }
-    
+
 }

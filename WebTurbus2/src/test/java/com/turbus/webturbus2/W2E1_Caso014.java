@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
@@ -48,7 +49,12 @@ public class W2E1_Caso014 {
         driver.findElement(By.id("fechaIda")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='do'])[1]/following::div[30]")).click();
+        int dia = 0;
+        WebElement baseTable = driver.findElement(By.xpath("//*[@id=\"calendarSingle\"]/div/div[1]/table"));
+        List<WebElement> tableRows = baseTable.findElements(By.className("valid"));
+        tableRows.get(dia);
+        WebElement element =tableRows.get(dia);
+        element.click();
         getFoto(driver);
         Thread.sleep(1000);
         if(driver.findElement(By.id("buscarPasaje")).isEnabled()){
@@ -62,6 +68,8 @@ public class W2E1_Caso014 {
 
     @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {
+        getFoto(driver);
+        Thread.sleep(1000);
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {

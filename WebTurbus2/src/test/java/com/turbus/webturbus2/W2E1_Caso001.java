@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
@@ -53,13 +54,18 @@ public class W2E1_Caso001 {
         driver.findElement(By.xpath("//div[2]/div[2]/ul/li")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[2]/div/label/span")).click();
+        driver.findElement(By.xpath("//div[2]/div/label/span")).click();//Sólo ida
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.id("fechaIda")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//tr[3]/td[3]/div")).click();
+        int dia = 0;
+        WebElement baseTable = driver.findElement(By.xpath("//*[@id=\"calendarSingle\"]/div/div[1]/table"));
+        List<WebElement> tableRows = baseTable.findElements(By.className("valid"));
+        tableRows.get(dia);
+        WebElement element =tableRows.get(dia);
+        element.click();
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.id("buscarPasaje")).click();
@@ -86,7 +92,13 @@ public class W2E1_Caso001 {
         driver.findElement(By.xpath("//button")).click();
         getFoto(driver);
         Thread.sleep(8000);
-        driver.findElement(By.xpath("//div[2]/div/div/div/div[2]/div/div/div/div")).click();
+        int asiento=0;
+        WebElement asientos = driver.findElement(By.className("bus_seat"));
+        List<WebElement> tableAsientos = asientos.findElements(By.className("seat-undefined"));
+        tableAsientos.get(asiento);
+        element=null;
+        element=tableAsientos.get(asiento);
+        element.click();
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
@@ -162,6 +174,8 @@ public class W2E1_Caso001 {
 
     @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {
+        getFoto(driver);
+        Thread.sleep(1000);
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {
