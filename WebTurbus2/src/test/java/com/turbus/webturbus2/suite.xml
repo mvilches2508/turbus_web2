@@ -5,6 +5,15 @@
         <packages>
             <package name="com.turbus.webturbus2"/>
             <classes>
+                <class name="com.turbus.webturbus2.W2E1_Caso001"/>
+                <class name="com.turbus.webturbus2.W2E1_Caso003"/>
+                <class name="com.turbus.webturbus2.W2E1_Caso004"/>
+                <class name="com.turbus.webturbus2.W2E1_Caso005"/>
+                <class name="com.turbus.webturbus2.W2E1_Caso007"/>
+                <class name="com.turbus.webturbus2.W2E1_Caso008"/>
+                <class name="com.turbus.webturbus2.W2E1_Caso009"/>
+                <class name="com.turbus.webturbus2.W2E1_Caso011"/>
+                <class name="com.turbus.webturbus2.W2E1_Caso012"/>
                 <class name="com.turbus.webturbus2.W2E1_Caso013"/>
                 <class name="com.turbus.webturbus2.W2E1_Caso014"/>   
                 <class name="com.turbus.webturbus2.W2E1_Caso015_016_017_018"/>
