@@ -120,7 +120,7 @@ public class W2E1_Caso008 {
         getFoto(driver);
         Thread.sleep(1000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,-750)");
+        js.executeScript("window.scrollBy(0,-750)");//scroll hacia abajo
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//button")).click();
