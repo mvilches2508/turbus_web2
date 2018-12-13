@@ -13,6 +13,7 @@ import org.apache.commons.io.FileUtils;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
 import org.openqa.selenium.*;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -25,15 +26,17 @@ public class W2E1_Caso008 {
     private StringBuffer verificationErrors = new StringBuffer();
 
     @BeforeClass(alwaysRun = true)
-    public void setUp() throws Exception {
+    public void setUp() throws Exception {//En este método se indica la url y el browser a utilizar
         System.setProperty("webdriver.chrome.driver", "src/test/java/driver/chromedriver.exe");
+        //System.setProperty("webdriver.gecko.driver", "src/test/java/driver/geckodriver.exe");
         driver = new ChromeDriver();
+        //driver = new FirefoxDriver();
         baseUrl = "http://172.20.4.233:8080/turbuscl/inicio-compra";
         driver.manage().window().maximize();
     }
 
     @Test
-    public void testW2E1_Caso008() throws Exception {
+    public void testW2E1_Caso008() throws Exception {//Script de prueba
         Robot robot = new Robot();
         driver.get(baseUrl);
         Thread.sleep(3000);
@@ -83,7 +86,7 @@ public class W2E1_Caso008 {
         driver.findElement(By.id("buscarPasaje")).click();
         getFoto(driver);
         Thread.sleep(20000);
-        driver.findElement(By.xpath("//app-itinerario/div/div/div[2]/div/div/div[2]")).click();
+        driver.findElement(By.xpath("//app-itinerario/div/div/div[2]/div/div/div[2]")).click();//Selecciona itinerario
         getFoto(driver);
         Thread.sleep(3000);
         driver.findElement(By.xpath("//div[2]/div[3]/a")).click();
@@ -95,7 +98,7 @@ public class W2E1_Caso008 {
         driver.findElement(By.xpath("//div[2]/app-itinerario/div/div[2]/div[3]/a")).click();
         getFoto(driver);
         Thread.sleep(5000);
-        driver.findElement(By.id("idPersona")).clear();
+        driver.findElement(By.id("idPersona")).clear();//Datos del pasajero
         driver.findElement(By.id("idPersona")).sendKeys("241284506");
         getFoto(driver);
         Thread.sleep(1000);
@@ -127,7 +130,7 @@ public class W2E1_Caso008 {
         getFoto(driver);
         Thread.sleep(5000);
         int asientoIda = 2;
-        WebElement asientosIda = driver.findElement(By.className("bus_seat"));
+        WebElement asientosIda = driver.findElement(By.className("bus_seat"));//Selección de asientos ida
         List<WebElement> tableAsientos = asientosIda.findElements(By.className("seat-undefined"));
         for (int i = 1; i <= asientoIda; i++) {
             element=null;
@@ -146,7 +149,7 @@ public class W2E1_Caso008 {
         getFoto(driver);
         Thread.sleep(20000);
         int asientoVuelta = 2;
-        WebElement asientosVuelta = driver.findElement(By.className("bus_seat"));
+        WebElement asientosVuelta = driver.findElement(By.className("bus_seat"));//Selección de asientos vuelta
         List<WebElement> tableAsientosVuelta = asientosVuelta.findElements(By.className("seat-undefined"));
         for (int i = 1; i <= asientoVuelta; i++) {
             element=null;
@@ -164,7 +167,7 @@ public class W2E1_Caso008 {
         driver.findElement(By.xpath("//button")).click();
         getFoto(driver);
         Thread.sleep(8000);
-        driver.findElement(By.id("nombreComprador")).clear();
+        driver.findElement(By.id("nombreComprador")).clear();//Datos del comprador
         driver.findElement(By.id("nombreComprador")).sendKeys("Carlos");
         getFoto(driver);
         Thread.sleep(1000);
@@ -191,7 +194,7 @@ public class W2E1_Caso008 {
         driver.findElement(By.id("pay")).click();
         getFoto(driver);
         Thread.sleep(10000);
-        driver.findElement(By.xpath("//a[2]/h3")).click();
+        driver.findElement(By.xpath("//a[2]/h3")).click();//Ingreso a webpay
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//button")).click();

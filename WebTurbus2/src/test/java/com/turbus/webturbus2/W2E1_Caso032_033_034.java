@@ -11,6 +11,7 @@ import org.apache.commons.io.FileUtils;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
 import org.openqa.selenium.*;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -22,15 +23,17 @@ public class W2E1_Caso032_033_034 {
     private StringBuffer verificationErrors = new StringBuffer();
 
     @BeforeClass(alwaysRun = true)
-    public void setUp() throws Exception {
+    public void setUp() throws Exception {//En este método se indica la url y el browser a utilizar
         System.setProperty("webdriver.chrome.driver", "src/test/java/driver/chromedriver.exe");
+        //System.setProperty("webdriver.gecko.driver", "src/test/java/driver/geckodriver.exe");
         driver = new ChromeDriver();
+        //driver = new FirefoxDriver();
         baseUrl = "http://172.20.4.233:8080/turbuscl/inicio-compra";
         driver.manage().window().maximize();
     }
 
     @Test
-    public void testW2E1_Caso032_033_034() throws Exception {
+    public void testW2E1_Caso032_033_034() throws Exception {//Validación correspondiente a datos del comprador, no genera el pago sin indicar el telf y correo
         driver.get(baseUrl);
         Thread.sleep(3000);
         getFoto(driver);
@@ -110,7 +113,7 @@ public class W2E1_Caso032_033_034 {
         getFoto(driver);
         Thread.sleep(8000);
         int asiento=0;
-        WebElement asientos = driver.findElement(By.className("bus_seat"));
+        WebElement asientos = driver.findElement(By.className("bus_seat"));//Selecciona asientos
         List<WebElement> tableAsientos = asientos.findElements(By.className("seat-undefined"));
         tableAsientos.get(asiento);
         element=null;

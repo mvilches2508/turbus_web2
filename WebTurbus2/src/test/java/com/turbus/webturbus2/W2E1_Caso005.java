@@ -11,6 +11,7 @@ import org.apache.commons.io.FileUtils;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
 import org.openqa.selenium.*;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -23,15 +24,17 @@ public class W2E1_Caso005 {
     private StringBuffer verificationErrors = new StringBuffer();
 
     @BeforeClass(alwaysRun = true)
-    public void setUp() throws Exception {
+    public void setUp() throws Exception {//En este método se indica la url y el browser a utilizar
         System.setProperty("webdriver.chrome.driver", "src/test/java/driver/chromedriver.exe");
+        //System.setProperty("webdriver.gecko.driver", "src/test/java/driver/geckodriver.exe");
         driver = new ChromeDriver();
+        //driver = new FirefoxDriver();
         baseUrl = "http://172.20.4.233:8080/turbuscl/inicio-compra";
         driver.manage().window().maximize();
     }
 
     @Test
-    public void testW2E1_Caso005() throws Exception {
+    public void testW2E1_Caso005() throws Exception {//Script de prueba
         driver.get(baseUrl);
         Thread.sleep(3000);
         getFoto(driver);
@@ -77,7 +80,7 @@ public class W2E1_Caso005 {
         driver.findElement(By.xpath("//div[2]/div[3]/a")).click();
         getFoto(driver);
         Thread.sleep(8000);
-        driver.findElement(By.id("idPersona")).clear();
+        driver.findElement(By.id("idPersona")).clear();//Datos del pasajero
         driver.findElement(By.id("idPersona")).sendKeys("169146195");
         getFoto(driver);
         Thread.sleep(1000);
@@ -93,7 +96,7 @@ public class W2E1_Caso005 {
         getFoto(driver);
         Thread.sleep(8000);
         int asiento=0;
-        WebElement asientos = driver.findElement(By.className("bus_seat"));
+        WebElement asientos = driver.findElement(By.className("bus_seat"));//selecciona asiento
         List<WebElement> tableAsientos = asientos.findElements(By.className("seat-undefined"));
         tableAsientos.get(asiento);
         element=null;
@@ -107,7 +110,7 @@ public class W2E1_Caso005 {
         driver.findElement(By.xpath("//button")).click();
         getFoto(driver);
         Thread.sleep(9000);
-        driver.findElement(By.id("nombreComprador")).click();
+        driver.findElement(By.id("nombreComprador")).click();//Datos del comprador
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li/button")).click();
@@ -128,7 +131,7 @@ public class W2E1_Caso005 {
         driver.findElement(By.id("pay")).click();
         getFoto(driver);
         Thread.sleep(10000);
-        driver.findElement(By.xpath("//a[2]/h3")).click();
+        driver.findElement(By.xpath("//a[2]/h3")).click();//Ingresa a webpay
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//button")).click();

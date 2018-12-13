@@ -12,6 +12,7 @@ import org.testng.annotations.*;
 import static org.testng.Assert.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -23,15 +24,17 @@ public class W2E1_Caso004 {
     private StringBuffer verificationErrors = new StringBuffer();
 
     @BeforeClass(alwaysRun = true)
-    public void setUp() throws Exception {
+    public void setUp() throws Exception {//En este método se indica la url y el browser a utilizar
         System.setProperty("webdriver.chrome.driver", "src/test/java/driver/chromedriver.exe");
+        //System.setProperty("webdriver.gecko.driver", "src/test/java/driver/geckodriver.exe");
         driver = new ChromeDriver();
+        //driver = new FirefoxDriver();
         baseUrl = "http://172.20.4.233:8080/turbuscl/inicio-compra";
         driver.manage().window().maximize();
     }
 
     @Test
-    public void testW2E1_Caso004() throws Exception {
+    public void testW2E1_Caso004() throws Exception {//Scrip de la prueba
         driver.get(baseUrl);
         Thread.sleep(3000);
         getFoto(driver);
@@ -71,7 +74,7 @@ public class W2E1_Caso004 {
         driver.findElement(By.id("buscarPasaje")).click();
         getFoto(driver);
         Thread.sleep(20000);
-        driver.findElement(By.xpath("//app-itinerario/div/div/div[2]/div/div/div[2]")).click();
+        driver.findElement(By.xpath("//app-itinerario/div/div/div[2]/div/div/div[2]")).click();//Selecciona itinerario
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//div[2]/div[3]/a")).click();
@@ -80,7 +83,7 @@ public class W2E1_Caso004 {
         driver.findElement(By.xpath("//div[2]/label/span")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        driver.findElement(By.id("idPersona")).clear();
+        driver.findElement(By.id("idPersona")).clear();// Datos del pasajero
         driver.findElement(By.id("idPersona")).sendKeys("45678966");
         getFoto(driver);
         Thread.sleep(1000);
@@ -96,7 +99,7 @@ public class W2E1_Caso004 {
         getFoto(driver);
         Thread.sleep(8000);
         int asiento=0;
-        WebElement asientos = driver.findElement(By.className("bus_seat"));
+        WebElement asientos = driver.findElement(By.className("bus_seat"));//Selección de asientos
         List<WebElement> tableAsientos = asientos.findElements(By.className("seat-undefined"));
         tableAsientos.get(asiento);
         element=null;
@@ -110,7 +113,7 @@ public class W2E1_Caso004 {
         driver.findElement(By.xpath("//button")).click();
         getFoto(driver);
         Thread.sleep(9000);
-        driver.findElement(By.id("nombreComprador")).clear();
+        driver.findElement(By.id("nombreComprador")).clear();//Datos del comprador
         driver.findElement(By.id("nombreComprador")).sendKeys("Maria");
         getFoto(driver);
         Thread.sleep(1000);
@@ -137,7 +140,7 @@ public class W2E1_Caso004 {
         driver.findElement(By.id("pay")).click();
         getFoto(driver);
         Thread.sleep(10000);
-        driver.findElement(By.xpath("//a[2]/h3")).click();
+        driver.findElement(By.xpath("//a[2]/h3")).click();//Ingreso a webpay
         getFoto(driver);
         Thread.sleep(1000);
         driver.findElement(By.xpath("//button")).click();
@@ -169,7 +172,7 @@ public class W2E1_Caso004 {
         getFoto(driver);
         driver.switchTo().defaultContent();
         Thread.sleep(58000);
-        try {
+        try {//Verifica la compra
             assertEquals(driver.findElement(By.xpath("//h2")).getText(), "TU COMPRA HA SIDO REALIZADA CON ÉXITO");
             System.out.println(driver.findElement(By.xpath("//h2")).getText());
             getFoto(driver);

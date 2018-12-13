@@ -13,6 +13,7 @@ import org.apache.commons.io.FileUtils;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
 import org.openqa.selenium.*;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -25,15 +26,17 @@ public class W2E1_Caso046_047_048_049_050_051 {
     private StringBuffer verificationErrors = new StringBuffer();
 
     @BeforeClass(alwaysRun = true)
-    public void setUp() throws Exception {
+    public void setUp() throws Exception {//En este método se indica la url y el browser a utilizar
         System.setProperty("webdriver.chrome.driver", "src/test/java/driver/chromedriver.exe");
+        //System.setProperty("webdriver.gecko.driver", "src/test/java/driver/geckodriver.exe");
         driver = new ChromeDriver();
+        //driver = new FirefoxDriver();
         baseUrl = "http://172.20.4.233:8080/turbuscl/inicio-compra";
         driver.manage().window().maximize();
     }
 
     @Test
-    public void testW2E1_Caso046_047_048_049_050_051() throws Exception {
+    public void testW2E1_Caso046_047_048_049_050_051() throws Exception {//Validación en viaje ida y vuelta, sin agregar datos del comprador
         Robot robot = new Robot();
         driver.get(baseUrl);
         Thread.sleep(3000);
@@ -127,7 +130,7 @@ public class W2E1_Caso046_047_048_049_050_051 {
         js.executeScript("window.scrollBy(0,-1000)");
         Thread.sleep(1000);
         int asientoIda = 2;
-        WebElement asientosIda = driver.findElement(By.className("bus_seat"));
+        WebElement asientosIda = driver.findElement(By.className("bus_seat"));//Selección de asientos
         List<WebElement> tableAsientos = asientosIda.findElements(By.className("seat-undefined"));
         for (int i = 1; i <= asientoIda; i++) {
             element=null;
