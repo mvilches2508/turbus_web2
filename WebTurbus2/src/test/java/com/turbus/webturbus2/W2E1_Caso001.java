@@ -12,6 +12,7 @@ import org.testng.annotations.*;
 import static org.testng.Assert.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -25,7 +26,9 @@ public class W2E1_Caso001 {
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver", "src/test/java/driver/chromedriver.exe");
+        //System.setProperty("webdriver.gecko.driver", "src/test/java/driver/geckodriver.exe");
         driver = new ChromeDriver();
+        //driver = new FirefoxDriver();
         baseUrl = "http://172.20.4.233:8080/turbuscl/inicio-compra";
         driver.manage().window().maximize();
     }
@@ -60,7 +63,7 @@ public class W2E1_Caso001 {
         driver.findElement(By.id("fechaIda")).click();
         getFoto(driver);
         Thread.sleep(1000);
-        int dia = 0;
+        int dia = 1;
         WebElement baseTable = driver.findElement(By.xpath("//*[@id=\"calendarSingle\"]/div/div[1]/table"));
         List<WebElement> tableRows = baseTable.findElements(By.className("valid"));
         tableRows.get(dia);
