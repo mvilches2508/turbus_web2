@@ -296,7 +296,7 @@ public class W2E1_Caso046_047_048_049_050_051 {
 
     private void getFoto(WebDriver webDriver) {
         try {
-            File path = new File("D:\\Git\\turbus_web2\\Evidencia\\W2E1_Caso046_047_048_049_050_051");
+            File path = new File("src/test/java/evidencia/W2E1_Caso046_047_048_049_050_051");
             path.mkdir();
             Date d = new Date();
             SimpleDateFormat sd = new SimpleDateFormat("dd_MM_yy_HH_mm_ss_a");
