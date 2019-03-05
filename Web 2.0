@@ -1,0 +1,271 @@
+Testlink
+http://gestorqa.starken.cl/testlink/lib/api/xmlrpc/v1/xmlrpc.php
+
+40f9d4ccac110d89b46aa822793c9a2b
+
+https://github.com/mvilches2508/Global-Testing.git
+
+
+System.setProperty("webdriver.chrome.driver", "C:\\Users\\dlsclient\\Desktop\\Carpeta\\drivers\\drivers\\chromedriver.exe");
+
+System.setProperty("webdriver.gecko.driver", "C:\\Users\\dlsclient\\Desktop\\Carpeta\\drivers\\drivers\\geckodriver.exe");
+
+1.- Datos Viaje :
+      Origen ; Santiago-Viña       
+      Fecha : cualquier día noviembre/diciembre/enero 2019
+      Tipo : IDA
+      Cantidad asientos : 1
+             
+
+2.- Datos Viaje :
+      Origen ; Santiago-Viña
+      Fecha : cualquier día diciembre/enero 2019
+       IDA/Vuelta
+      Cantidad asientos : 4
+
+3.- Datos Viaje :
+      Origen ; Santiago-Antofagasta
+      Fecha : cualquier día diciembre/enero 2019
+       IDA/Vuelta
+      Cantidad asientos : 4
+      Asientos : Distintas tarifas
+
+
+Datos Pago
+
+Rut : 11111111-1
+Clave : 123
+
+Tarjetas
+TARJETAS DE PRUEBA CREDITO
+
+Exito (VISA): 
+PAN:                     4051885600446623
+FECHA EXP:        Cualquiera superior al dia de hoy
+CVV:                     123
+
+Fracaso (MASTERCARD): 
+PAN:                     5186059559590568
+FECHA EXP:        Cualquiera superior al dia de hoy
+CVV:                     123
+
+
+TARJETAS DE PRUEBA DEBITO
+Exito      :              4051885600446623
+Fracaso :              5186059559590568
+
+
+http://172.20.4.233:8080/turbuscl/
+
+/html/body/app-root/app-seleccion-itinerario/main/div/div/div[2]/div/div/div[2]/div[2]/app-itinerario/div
+
+buscarPasaje
+
+(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
+				"src/ida/driver/phantomjs.exe");
+				
+src/ida/driver/phantomjs.exe
+
+
+
+<dependency>
+    <groupId>com.github.klieber</groupId>
+    <artifactId>phantomjs</artifactId>
+    <version>2.1.1</version>
+	<scope>test</scope>
+</dependency>
+
+
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>htmlunit-driver</artifactId>
+    <version>2.33.3</version>
+	<scope>test</scope>
+</dependency>
+
+<dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version></version>
+		<scope>test</scope>
+</dependency>
+
+https://www.guru99.com/maven-jenkins-with-selenium-complete-tutorial.html
+
+
+
+
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setJavascriptEnabled(true);
+        caps.setCapability(CapabilityType.ELEMENT_SCROLL_BEHAVIOR, true);
+	caps.setCapability(CapabilityType.ENABLE_PROFILING_CAPABILITY, true);
+	caps.setCapability(CapabilityType.HAS_NATIVE_EVENTS, true);
+        caps.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.ACCEPT);
+        caps.setCapability("takesScreenshot", false);
+        caps.setCapability(PhantomJSDriverService.PHANTOMJS_CLI_ARGS,
+                new String[]{"--web-security=false",
+                    "--ssl-protocol=any", "--ignore-ssl-errors=true",
+                    "--webdriver-loglevel=INFO"});    
+        caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
+                "src/test/java/driver/phantomjs.exe");
+        driver = new PhantomJSDriver(caps);
+		
+		
+		
+robot.keyPress(KeyEvent.VK_ENTER);
+robot.keyRelease(KeyEvent.VK_ENTER);
+Thread.sleep(1000);
+
+
+http://www.tutorialspoint.com/testng/testng_environment.htm
+
+https://stackoverflow.com/questions/49155041/how-to-execute-testng-in-mac-os-command-terminal
+
+https://developer.apple.com/documentation/webkit/testing_with_webdriver_in_safari
+
+
+Según información dada por desarrollo, esta funcionalidad no es usada por los usuarios
+
+27
+Documento requerido Adicionales e Impuesto Verde
+
+Proveedor Prenda Chile
+
+Acrónimo MERA
+
+Documento proveedor 12
+
+
+79, 97, 98, 106, 631, 649 en espera de corrección
+
+
+4580425
+
+5910856-2
+
+180239852
+
+180207096
+
+
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-server-standalone</artifactId>
+    <version>2.53.0</version>
+	<scope>test</scope>
+</dependency>
+
+Pricilla Noemí Pavez Tapia
+
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>2.10</version>
+	<scope>test</scope>
+</dependency>
+
+
+pay
+
+control #control > frame:nth-child(2)
+
+
+https://github.com/mvilches2508/turbus_web2.git
+
+
+
+seat-undefined
+
+driver.findElement(By.xpath("//*[@id=\"calendarSingle\"]/div/div[1]/table")); ida
+
+driver.findElement(By.xpath("//*[@id=\"calendar\"]/div/div[1]/table")); ida y vuelta
+
+
+
+
+http://chromedriver.chromium.org/mobile-emulation
+
+
+http://appium.io/docs/en/writing-running-appium/web/mobile-web/
+
+
+https://www.dev2qa.com/how-to-run-test-cases-using-apple-safari-in-selenium-automation-script/
+
+
+https://developer.chrome.com/multidevice/user-agent
+
+
+https://stackoverflow.com/questions/26598239/how-to-launch-safari-with-selenium-webdriver-using-java
+
+
+
+
+
+IPHONE
+System.setProperty("webdriver.chrome.driver", "bin/web2_0/driver/chromedriver.exe");
+		baseUrl = "http://172.20.4.233:8080/turbuscl/";
+		Map<String, String> mobileEmulation = new HashMap<>();
+		mobileEmulation.put("deviceName", "iPhone 6/7/8"); ChromeOptions chromeOptions = 
+		new ChromeOptions(); chromeOptions.setExperimentalOption("mobileEmulation",mobileEmulation);
+		driver = new ChromeDriver(chromeOptions);
+
+
+
+		
+		
+		
+		
+		
+		
+
+		
+		//Valida error de fecha, no permite continuar sin indicar las mismas
+		
+		
+		
+		
+ANDROID
+System.setProperty("webdriver.chrome.driver", "bin/web2_0/driver/chromedriver.exe");
+		baseUrl = "http://172.20.4.233:8080/turbuscl/";
+		Map<String, String> mobileEmulation = new HashMap<>();
+		mobileEmulation.put("deviceName", "Galaxy S5");
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.setExperimentalOption("mobileEmulation",mobileEmulation);
+		driver = new ChromeDriver(chromeOptions);
+		
+		driver.findElement(By.id("confirmarFechaBtn")).click();
+	    logEjecucion.append("Confirma fecha ");
+	    getFoto(driver);
+	    Thread.sleep(1000);
+		
+		
+		mobileEmulation.put("deviceName", "Nexus 5");
+
+		
+		
+		
+Extensiones:
+https://stackoverflow.com/questions/34222412/load-chrome-extension-using-selenium
+
+chfdigebbepdmeelcfiefkklfldmmgld
+
+
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import org.apache.commons.io.FileUtils;
+import org.testng.annotations.*;
+import static org.testng.Assert.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+
+
+
+C:\jenkins\workspace\Web2.0\bin\web2_0\evidencia
